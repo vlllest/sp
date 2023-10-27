@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    int massInt[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    short massShort[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    long massLong[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    float massFloat[10] = { 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 11.1 };
+    double massDouble[10] = { 11.11, 1.22, 1.33, 1.44, 1.55, 1.66, 1.77, 1.88, 1.99, 2.124 };
+    char massChar[10] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+    bool massBool[10] = { true, false, true, false, true, false, true, false, true, false };
+
+    cout << " Массив INT:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massInt[" << i << "] = " << massInt[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив SHORT:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massShort[" << i << "] = " << massShort[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив LONG:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massLong[" << i << "] = " << massLong[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив FLOAT:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massFloat[" << i << "] = " << massFloat[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив DOUBLE:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massDouble[" << i << "] = " << massDouble[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив CHAR:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massChar[" << i << "] = " << massChar[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " Массив BOOL:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " massBool[" << i << "] = " << massBool[i] << endl;
+    }
+
+    return 0;
+}
