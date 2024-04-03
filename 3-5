@@ -1,0 +1,85 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите название дня недели: ");
+        string day = Console.ReadLine();
+
+        if (day == "понедельник")
+        {
+            Console.WriteLine("Порядковый номер дня: 1");
+        }
+        else if (day == "вторник")
+        {
+            Console.WriteLine("Порядковый номер дня: 2");
+        }
+        else if (day == "среда")
+        {
+            Console.WriteLine("Порядковый номер дня: 3");
+        }
+        else if (day == "четверг")
+        {
+            Console.WriteLine("Порядковый номер дня: 4");
+        }
+        else if (day == "пятница")
+        {
+            Console.WriteLine("Порядковый номер дня: 5");
+        }
+        else if (day == "суббота")
+        {
+            Console.WriteLine("Порядковый номер дня: 6");
+        }
+        else if (day == "воскресенье")
+        {
+            Console.WriteLine("Порядковый номер дня: 7");
+        }
+        else
+        {
+            Console.WriteLine("Такого дня нет.");
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите название дня недели: ");
+        string day = Console.ReadLine();
+
+        switch (day)
+        {
+            case "понедельник":
+                Console.WriteLine("Порядковый номер дня: 1");
+                break;
+            case "вторник":
+                Console.WriteLine("Порядковый номер дня: 2");
+                break;
+            case "среда":
+                Console.WriteLine("Порядковый номер дня: 3");
+                break;
+            case "четверг":
+                Console.WriteLine("Порядковый номер дня: 4");
+                break;
+            case "пятница":
+                Console.WriteLine("Порядковый номер дня: 5");
+                break;
+            case "суббота":
+                Console.WriteLine("Порядковый номер дня: 6");
+                break;
+            case "воскресенье":
+                Console.WriteLine("Порядковый номер дня: 7");
+                break;
+            default:
+                Console.WriteLine("Такого дня нет.");
+                break;
+        }
+    }
+}
