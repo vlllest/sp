@@ -1,0 +1,68 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        int rows = 4;
+        int cols = 4;
+        
+        int[,] originalArray = new int[rows, cols];
+        Random random = new Random();
+
+        // Заполнение массива случайными числами
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                originalArray[i, j] = random.Next(1, 100); // случайные числа от 1 до 100
+                Console.Write(originalArray[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+
+        int rowToRemove = random.Next(0, rows); // выбор индекса удаляемой строки
+        int colToRemove = random.Next(0, cols); // выбор индекса удаляемого столбца
+
+        Console.WriteLine($"\nУдаленная строка: {rowToRemove}");
+        Console.WriteLine($"Удаленный столбец: {colToRemove}");
+
+        // Создание нового массива со строкой и столбцом, которые необходимо удалить
+        int[,] newArray = new int[rows - 1, cols - 1];
+        int newRow = 0;
+        int newCol = 0;
+
+        for (int i = 0; i < rows; i++)
+        {
+            if (i == rowToRemove)
+            {
+                continue; // пропустить удаляемую строку
+            }
+
+            for (int j = 0; j < cols; j++)
+            {
+                if (j == colToRemove)
+                {
+                    continue; // пропустить удаляемый столбец
+                }
+
+                newArray[newRow, newCol] = originalArray[i, j];
+                newCol++;
+            }
+
+            newRow++;
+            newCol = 0;
+        }
+
+        Console.WriteLine("\nНовый массив после удаления строки и столбца:");
+        // Вывод нового массива после удаления строки и столбца
+        for (int i = 0; i < rows - 1; i++)
+        {
+            for (int j = 0; j < cols - 1; j++)
+            {
+                Console.Write(newArray[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
