@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите значение n:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int sum = 0;
+
+        // Цикл for
+        for (int i = 1; i <= n; i++)
+        {
+            sum += 2 * i;
+        }
+        Console.WriteLine("Сумма с использованием цикла for: " + sum);
+
+        // Сброс суммы и использование цикла while
+        sum = 0;
+        int j = 1;
+        while (j <= n)
+        {
+            sum += 2 * j;
+            j++;
+        }
+        Console.WriteLine("Сумма с использованием цикла while: " + sum);
+
+        // Сброс суммы и использование цикла do-while
+        sum = 0;
+        int k = 1;
+        do
+        {
+            sum += 2 * k;
+            k++;
+        } while (k <= n);
+        Console.WriteLine("Сумма с использованием цикла do-while: " + sum);
+    }
+}
