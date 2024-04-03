@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        char[] consonants = { 'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M' };
+
+        Console.WriteLine("Содержимое массива согласных букв:");
+        foreach (char letter in consonants)
+        {
+            Console.Write(letter + " ");
+        }
+
+        Console.ReadLine();
+    }
+}
