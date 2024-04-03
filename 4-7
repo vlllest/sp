@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        char[] charArray = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+
+        Console.WriteLine("Исходный массив:");
+        PrintArray(charArray);
+
+        Array.Reverse(charArray);
+
+        Console.WriteLine("\nМассив с обратным порядком элементов:");
+        PrintArray(charArray);
+    }
+
+    static void PrintArray(char[] array)
+    {
+        foreach (char element in array)
+        {
+            Console.Write(element + " ");
+        }
+    }
+}
