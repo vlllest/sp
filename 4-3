@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int size = 10;
+        char[] charArray = new char[size];
+        char startChar = 'а';
+
+        for (int i = 0; i < size; i++)
+        {
+            charArray[i] = (char)(startChar + 2 * i);
+        }
+
+        Console.WriteLine("Массив в прямом порядке:");
+        foreach (char c in charArray)
+        {
+            Console.Write(c + " ");
+        }
+
+        Console.WriteLine("\nМассив в обратном порядке:");
+        Array.Reverse(charArray);
+        foreach (char c in charArray)
+        {
+            Console.Write(c + " ");
+        }
+    }
+}
