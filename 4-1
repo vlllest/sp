@@ -1,0 +1,30 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите размер массива:");
+        if (!int.TryParse(Console.ReadLine(), out int size) || size <= 0)
+        {
+            Console.WriteLine("Ошибка: введите положительное целое число.");
+            return;
+        }
+
+        int[] array = new int[size];
+        int count = 0;
+
+        for (int i = 2; count < size; i += 5)
+        {
+            array[count] = i;
+            count++;
+        }
+
+        Console.WriteLine("Массив чисел, делящихся на 5 с остатком 2:");
+        foreach (var num in array)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
